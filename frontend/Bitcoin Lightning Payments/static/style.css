@@ -1,0 +1,302 @@
+:root {
+    --color-primary: #007bff;
+    --color-secondary: #f1c919;
+    --color-accent: #80ff00;
+    --color-background: #f8f9fa;
+    --color-text: #333333;
+}
+
+body {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0;
+    padding: 3rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    min-height: 100vh;
+}
+
+h1 {
+    color: var(--color-background);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    color: #f1c919;
+}
+
+
+.lead {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.signup-text {
+    color: var(--color-secondary);
+    font-size: 1.2rem;                         
+    margin-bottom: 2rem;           
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    color: #ffffff;
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary:active {
+    transform: translateY(1px); /* Slight downward shift when clicked */
+}
+
+.btn-secondary:focus {
+    outline: none; /* Remove default focus outline */
+}
+
+.btn-outline-secondary {
+    color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--color-secondary);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.feature-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+}
+
+.feature-item h3 {
+    color: var(--color-secondary);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.feature-description {
+    color: #ffffff;
+}
+
+.hero-content {
+    margin-bottom: 3rem;
+}
+
+.cta-buttons {
+    margin-bottom: 2rem;
+}
+
+/* QR code page styles */
+.qr-container {
+    display: inline-block;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.qr-container img {
+    max-width: 300px;
+    height: auto;
+    border: none;
+}
+
+.col-md-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Lightning animation */
+.lightning-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.lightning-bolt {
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 0;
+    background-color: #fff;
+    opacity: 0;
+}
+
+.lightning-bolt:nth-child(1) {
+    left: 20%;
+    animation: lightning1 8s infinite;
+}
+
+.lightning-bolt:nth-child(2) {
+    left: 50%;
+    animation: lightning2 8s infinite;
+    animation-delay: 0.2s;
+}
+
+.lightning-bolt:nth-child(3) {
+    left: 80%;
+    animation: lightning3 8s infinite;
+    animation-delay: 0.4s;
+}
+
+@keyframes lightning1 {
+    0%, 100% {
+        opacity: 0;
+        height: 0;
+    }
+    10%, 30% {
+        opacity: 1;
+        height: 100%;
+        box-shadow: 0 0 20px 2px rgba(255, 255, 255, 0.8);
+    }
+    20% {
+        opacity: 0;
+    }
+}
+
+@keyframes lightning2 {
+    0%, 100% {
+        opacity: 0;
+        height: 0;
+    }
+    5%, 25% {
+        opacity: 1;
+        height: 80%;
+        box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.8);
+    }
+    15% {
+        opacity: 0;
+    }
+}
+
+@keyframes lightning3 {
+    0%, 100% {
+        opacity: 0;
+        height: 0;
+    }
+    15%, 35% {
+        opacity: 1;
+        height: 90%;
+        box-shadow: 0 0 25px 3px rgba(255, 255, 255, 0.8);
+    }
+    25% {
+        opacity: 0;
+    }
+}
+
+/* Thunder animation */
+.thunder-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.thunder {
+    width: 65px;
+    height: 117px;
+    position: relative;
+}
+
+.thunder:before,
+.thunder:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #f1c919;
+    box-shadow: 0 0 0 50px;
+    clip-path: polygon(
+        100% 0,
+        23% 46%,
+        46% 44%,
+        15% 69%,
+        38% 67%,
+        0 100%,
+        76% 57%,
+        53% 58%,
+        88% 33%,
+        60% 37%
+    );
+}
+
+.thunder:after {
+    animation: pulsing 1s infinite;
+    transform: perspective(300px) translateZ(0px);
+}
+
+@keyframes pulsing {
+    to {
+        transform: perspective(300px) translateZ(180px);
+        opacity: 0;
+    }
+}
+
