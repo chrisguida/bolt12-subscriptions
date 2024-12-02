@@ -209,6 +209,10 @@ h2 {
     animation-delay: 0.4s;
 }
 
+.table td, .table th {
+    color: white; /* Set text color to white */
+}
+
 @keyframes lightning1 {
     0%, 100% {
         opacity: 0;
